@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MappingUtilities.Handlers;
 using DataModels;
+using System.Text.Json;
 
 namespace MappingAPI.Controllers
 {
@@ -13,7 +14,7 @@ namespace MappingAPI.Controllers
         {
             try
             {
-                return StatusCode(200, new MapHandler().Map(data, sourceType, targetType));
+                return new JsonResult(new MapHandler().Map(data, sourceType, targetType), new JsonSerializerOptions());
             }
             catch (Exception ex) 
             {

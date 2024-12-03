@@ -17,7 +17,7 @@ namespace MappingUtilities.Mappers.ReservationMappers.Google
                 targetModel.PaymentID = sourceModel.PaymentID;
                 targetModel.CheckInTS = sourceModel.CheckIn;
                 targetModel.CheckOutTS = sourceModel.CheckOut;
-                targetModel.checkInGuests = sourceModel.NoOfGuests;
+                targetModel.CheckInGuests = sourceModel.NoOfGuests;
                 targetModel.BookingDate = sourceModel.BookingDate;
                 targetModel.BookingStatus = sourceModel.Status;
                 targetModel.AdditionalDetails = sourceModel.AdditionalDetails;

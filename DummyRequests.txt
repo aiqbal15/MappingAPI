@@ -1,0 +1,108 @@
+--------------------------------------------
+google.hotel
+{
+    "ID": "Grossenhainer Strasse 60-1",
+    "Name": "Senftewhberg",
+    "Description": "Berlin-Brandenberg",
+    "Location": {
+        "City": "ABC",
+        "Country": "BNM",
+        "PostalCode": "io"
+    }
+}
+
+--------------------------------------------
+google.location
+{
+        "City": "ABC",
+        "Country": "BNM",
+        "PostalCode": "io"
+}
+
+--------------------------------------------
+google.reservation
+{
+  "ID": "R12345",
+  "HotelID": "H123",
+  "GuestID": "G5678",
+  "RoomID": "RM789",
+  "PaymentID": "P34567",
+  "CheckInTS": "2024-01-10T14:00:00",
+  "CheckOutTS": "2024-01-15T11:00:00",
+  "CheckInGuests": 2,
+  "BookingDate": "2023-12-01T09:30:00",
+  "BookingStatus": "Confirmed",
+  "AdditionalDetails": "Requires an extra bed."
+}
+
+--------------------------------------------
+google.room
+{
+  "ID": "12345",
+  "HotelID": "H123",
+  "Category": "Deluxe",
+  "NoOfBedrooms": 2,
+  "NoOfBathrooms": 1,
+  "NoOfKitchen": 1,
+  "Floor": 3,
+  "GuestLimit": 4,
+  "Price": 150.5,
+  "IsAvailable": true,
+  "Area": 500,
+  "AvailableFrom": "2024-01-01",
+  "Description": "A cozy deluxe room with modern amenities."
+}
+
+--------------------------------------------
+internal.hotel
+{
+        "HotelID": "Grossenhainer Strasse 60-1",
+        "HotelName": "Senftewhberg",
+        "HotelDescription": "Berlin-Brandenberg",
+        "Location": {
+            "City":"ABC",
+            "Country":"BNM",
+            "ZipCode":"io"
+        }
+}
+--------------------------------------------
+internal.location
+{
+            "City":"ABC",
+            "Country":"BNM",
+            "ZipCode":"io"
+        }
+
+--------------------------------------------
+internal.reservation
+{
+    "ReservationID": "R12345",
+    "HotelID": "H123",
+    "GuestID": "G5678",
+    "RoomID": "RM789",
+    "PaymentID": "P34567",
+    "CheckIn": "2024-01-10T14:00:00",
+    "CheckOut": "2024-01-15T11:00:00",
+    "NoOfGuests": 2,
+    "BookingDate": "2023-12-01T09:30:00",
+    "Status": "Confirmed",
+    "AdditionalDetails": "Requires an extra bed."
+}
+
+--------------------------------------------
+internal.room
+{
+    "ID": "12345",
+    "HotelID": "H123",
+    "Category": "Deluxe",
+    "Bedrooms": 2,
+    "Bathrooms": 1,
+    "Kitchen": 1,
+    "Floor": 3,
+    "GuestLimit": 4,
+    "Price": 150.5,
+    "IsAvailable": true,
+    "Area": 500,
+    "AvailableFrom": "2024-01-01",
+    "Description": "A cozy deluxe room with modern amenities."
+}
