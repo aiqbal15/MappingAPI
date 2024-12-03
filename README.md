@@ -46,12 +46,14 @@ Extensibility:
   	
   (2) Go to MappingUtilities project and open Handlers -> DataModelHandler.cs -> DataModelsEnum. Add an Enum entry (any name used for conveniently accessing the new model) and a description (this is the name we are expecting the user to give when sending a request). For example; 
     		[Description("internal.location")] //internal.location is the name user passes
-  			INTERNAL_LOCATION, //enum valu used to refer to this model internally
+  			INTERNAL_LOCATION, //enum value used to refer to this model internally
   			
   (3) Staying in the same file, go to the method "Type GetType(string typeName)" and add an entry for your enum name and add the data model name (the one you created in DataModels project).
   	
   (4) In the same project, go to Mappers folder and create a class for your mapper (e.g; InternalToGoogleHotel.cs) and add to the relevant folder (HotelMappers, etc. or create new). Ensure that IMapper interface is implemented. Define source and target models in class and add the mapping. 
   	
   (5) Build the solution and enjoy! :)
+  
+ P.S.: There is a dummy request file.
 	
 	
