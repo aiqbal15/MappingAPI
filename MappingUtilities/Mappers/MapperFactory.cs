@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Utilities.Mappers
+namespace MappingUtilities.Mappers
 {
     public static class MapperFactory
     {

@@ -1,7 +1,7 @@
 ﻿using SourceModel = DataModels.External.Google.Reservation;
 using TargetModel = DataModels.Internal.Reservation;
 
-namespace Utilities.Mappers.ReservationMappers.Google
+namespace MappingUtilities.Mappers.ReservationMappers.Google
 {
     public class GoogleToInternalMapper : IMapper<SourceModel, TargetModel>
     {

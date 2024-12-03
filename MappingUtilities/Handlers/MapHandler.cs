@@ -1,7 +1,6 @@
-﻿using System.Security.AccessControl;
-using Utilities.Mappers;
+﻿using MappingUtilities.Mappers;
 
-namespace Utilities.Handlers
+namespace MappingUtilities.Handlers
 {
     public class MapHandler
     {
@@ -42,24 +41,31 @@ namespace Utilities.Handlers
 
         private void MapSourceToData(Object sourceObj, ref Object targetObj) 
         {
-            // Step - 1: Get the appropriate IMapper instance
-            var mapperInstance = MapperFactory.GetMapperInstance(sourceObj.GetType(), targetObj.GetType());
-
-            //Step - 2: Map source to target
-            if (mapperInstance != null) 
+            try
             {
-                var mapperType = mapperInstance.GetType();
+                // Step - 1: Get the appropriate IMapper instance
+                var mapperInstance = MapperFactory.GetMapperInstance(sourceObj.GetType(), targetObj.GetType());
 
-                var mapMethod = mapperType.GetMethod("Map");
-
-                if (mapMethod != null)
+                //Step - 2: Map source to target
+                if (mapperInstance != null)
                 {
-                    var parameters = new object[] { sourceObj, targetObj };
-                    mapMethod.Invoke(mapperInstance, parameters);
+                    var mapperType = mapperInstance.GetType();
 
-                    targetObj = parameters[1];
+                    var mapMethod = mapperType.GetMethod("Map");
+
+                    if (mapMethod != null)
+                    {
+                        var parameters = new object[] { sourceObj, targetObj };
+                        mapMethod.Invoke(mapperInstance, parameters);
+
+                        targetObj = parameters[1];
+                    }
                 }
-            }            
+            }
+            catch 
+            {
+                throw;
+            }                     
         }
     }
 }

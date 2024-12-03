@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Text.Json;
-using Utilities.Extensions;
+using MappingUtilities.Extensions;
 
-namespace Utilities.Handlers
+namespace MappingUtilities.Handlers
 {
     internal static class DataModelHandler
     {

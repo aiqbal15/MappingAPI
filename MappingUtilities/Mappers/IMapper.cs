@@ -1,4 +1,4 @@
-﻿namespace Utilities.Mappers
+﻿namespace MappingUtilities.Mappers
 {
     public interface IMapper<SourceModelObj, TargetModelObj>
     {

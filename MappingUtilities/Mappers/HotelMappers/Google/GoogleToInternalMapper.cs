@@ -1,7 +1,7 @@
 ﻿using SourceModel = DataModels.External.Google.Hotel;
 using TargetModel = DataModels.Internal.Hotel;
 
-namespace Utilities.Mappers.HotelMappers.Google
+namespace MappingUtilities.Mappers.HotelMappers.Google
 {
     public class GoogleToInternalMapper : IMapper<SourceModel, TargetModel>
     {

@@ -1,9 +1,9 @@
-﻿using SourceModel = DataModels.External.Google.Location;
-using TargetModel = DataModels.Internal.Location;
+﻿using SourceModel = DataModels.Internal.Location;
+using TargetModel = DataModels.External.Google.Location;
 
-namespace Utilities.Mappers.LocationMappers.Google
+namespace MappingUtilities.Mappers.LocationMappers.Google
 {
-    public class GoogleToInternalMapper : IMapper<SourceModel, TargetModel>
+    public class InternalToGoogleMapper:IMapper<SourceModel, TargetModel>
     {
         public void Map(SourceModel sourceModel, ref TargetModel targetModel)
         {
@@ -12,7 +12,7 @@ namespace Utilities.Mappers.LocationMappers.Google
             {
                 targetModel.City = sourceModel.City;
                 targetModel.Country = sourceModel.Country;
-                targetModel.ZipCode = sourceModel.PostalCode;                
+                targetModel.PostalCode = sourceModel.ZipCode;
             }
         }
     }

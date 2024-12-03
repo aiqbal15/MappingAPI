@@ -1,7 +1,7 @@
 ﻿using SourceModel = DataModels.Internal.Room;
 using TargetModel = DataModels.External.Google.Room;
 
-namespace Utilities.Mappers.RoomMappers.Google
+namespace MappingUtilities.Mappers.RoomMappers.Google
 {
     public class InternalToGoogleMapper:IMapper<SourceModel, TargetModel>
     {

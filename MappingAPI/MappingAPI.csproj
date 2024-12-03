@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\DataModels.csproj" />
-    <ProjectReference Include="..\Utilities\Utilities.csproj" />
+    <ProjectReference Include="..\MappingUtilities\MappingUtilities.csproj" />
   </ItemGroup>
 
 </Project>
